@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 920px;
+    border: 2px solid blue;
+}
+
+.container div {
+    border: 2px solid red;
+    width: 53.5px;
+    height: 53.5px;
+}
