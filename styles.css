@@ -9,12 +9,15 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 920px;
-    border: 2px solid blue;
+    max-width: 924px;
 }
 
 .container div {
-    border: 2px solid red;
-    width: 53.5px;
-    height: 53.5px;
+    border: 1px solid rgb(105, 105, 105);
+    width: 55.75px;
+    height: 55.75px;
+}
+
+.black {
+    background-color: black;
 }
