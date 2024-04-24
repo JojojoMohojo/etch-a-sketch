@@ -1,23 +1,33 @@
 body {
     margin: 0;
     padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.page {
     display: flex;
     justify-content: center;
 }
 
-
+button {
+    margin: 8px 0 8px 0;
+    /* 37px height */
+}
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 924px;
+    width: 880px;
+    height: 880px; /*928px height*/
+    border: 4px solid black;
 }
 
-.container div {
-    border: 1px solid rgb(105, 105, 105);
-    width: 55.75px;
-    height: 55.75px;
+#square {
+    /*border: 1px solid rgb(105, 105, 105);*/
+    width: 55px;
+    height: 55px;
 }
 
 .black {
-    background-color: black;
+    background-color: rgb(82, 82, 82);
 }
