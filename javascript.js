@@ -1,16 +1,23 @@
 const container = document.querySelector(".container");
 
+
 for (let i = 0; i < 256; i++) {
     const square =  document.createElement("div");
     square.id = "square";
+    square.style.opacity = 0;
     square.addEventListener("mouseover", () => {
         square.classList.add("black");
-    })
+        let opacity = parseFloat(square.style.opacity);
+        if (opacity < 1) {
+            opacity += 0.1;
+            square.style.opacity = opacity;
+            console.log(square.style.opacity);
+        };
+    });
     container.appendChild(square);
 }
 
 const sizeButton = document.querySelector("button");
-
 sizeButton.addEventListener("click", resetGrid);
 
 function resetGrid() {
@@ -23,18 +30,22 @@ function resetGrid() {
     }
 
     let totalSquares = gridSize * gridSize;
-    console.log(gridSize);
-    console.log(totalSquares);
     let squareSize = 880 / gridSize;
-    console.log(squareSize);
     for (let i = 0; i < totalSquares; i++) {
         const square =  document.createElement("div");
         square.className = "square"
         square.style.width = squareSize + "px";
         square.style.height = squareSize + "px";
+        square.style.opacity = 0;
         square.addEventListener("mouseover", () => {
             square.classList.add("black");
-        })
+            let opacity = parseFloat(square.style.opacity);
+            if (opacity < 1) {
+                opacity += 0.1;
+                square.style.opacity = opacity;
+                console.log(square.style.opacity);
+        };
+    });
         container.appendChild(square);
     }
 }
